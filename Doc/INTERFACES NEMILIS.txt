@@ -1,0 +1,8 @@
+								INTERFACES "NEMILIS"
+Colores: 
+rgb(34, 102, 159)
+rgb(154, 217, 239)
+steelblue
+Tipografia:
+Estilos: 
+Interlineados:

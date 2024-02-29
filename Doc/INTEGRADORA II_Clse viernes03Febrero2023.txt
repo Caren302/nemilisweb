@@ -1,0 +1,4 @@
+1.2. Soluciones a partir de la innovacion incremental. 
+-Elementos del diseño de soluciones. 
+-Diseño aquitectonico Electronico: Su objetivo es desarrollar una estructura modular del software y representar las relaciones de control entre los modulos, mezcla de la estructura de programas y de las de datos y define las interfaces que facilitan el flujo de datos entre los modulos que definen el software.
+-Diseño de interfacz: Su objetico es diseñar una interfaz para el usuario que le proporcione una comunicacionn bidireccional con el software duranate su ejecucion.  

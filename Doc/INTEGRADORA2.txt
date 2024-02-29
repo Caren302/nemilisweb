@@ -1,0 +1,8 @@
+ºCaracteristicas de los usuarios: 
+-Demografias: Edad, genero, lugar de residencia, nivel socio-economico. 
+-Experiencia personal: Nivel educativo, años de experiencia laboral, funciones y responsabilidad de cargo. 
+-Habilidades tecnologicas: Nivel, años de experiencia. 
+-Tecnologia disponible: Hadware, Softwarey otras herramientas. 
+-Opiniones y aptitudes: Preferencias de producto, temor a la tecnologia. 
+-Estilo de aprendizaje: Audiovisual, visual. 
+-Evaluacion de errores: Consecuencias que podrian causar los errores del usuario. 

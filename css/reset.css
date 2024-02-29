@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Times New Roman', Times, serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100px;
+}
+.cla1 {
+background-color: orange;	
+width: 110%;
+}
+.cla2{
+	background-color: greenyellow;	
+	}
+	.cla3{
+		background-color: goldenrod;
+
+		}	
+		.cla4{
+			background-color: green;	
+			}
+			.cla9{
+				height: 400px;
+				width: 300px;
+				}
+				.cla8{
+					background-color: #C0392B;
+					width: 20%;			
+				}
+					.form{
+						color: blueviolet;	
+						}
+	fieldset{
+		width: 100px;
+		}
+		legend{
+			color:#FFFFFF;
+			background-color:Black;
+			font-weight:bold;
+			text-shadow:0em 0.88em 0.88em white;
+			border:4px groove;
+		   width: 300px;
+		   font-size: medium;
+			}
+			.boton{
+				height: 90px;
+			   width: 290px;
+			   background-color: silver;
+			   font-size: larger;
+				}
+				textarea{
+				   text-align: right;
+				   background-color:#E67E22 ;
+				   font-size: larger;
+				}
+					input
+					{
+					   text-align: center;
+						}
+						.value{
+							width: 100%;
+
+							 }
+.tab1{
+	width: 50%;
+background-color: rgb(78, 238, 158);
+	 }
+	 .tab2{
+		WIDTH:60%;
+	background-color: burlywood;
+		 }
+		 
+		 .tab3{
+			WIDTH:60%;
+		background-color: rgb(194, 248, 113);
+			 }
+		

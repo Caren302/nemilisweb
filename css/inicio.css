@@ -1,0 +1,64 @@
+.container-login{
+    width: 300px;
+    box-sizing: border-box;
+    height: auto;
+    margin: 0;
+    padding: 50px;
+    background-color: #FDFEFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 10px;
+    border-style: inset; 
+    text-decoration-color: white;
+}
+.tittles {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    color: black;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: #0554B6;
+}
+
+label{
+    font-size: 18px;
+    line-height: 15px;
+    color: black;
+    margin: 24px 0;
+    text-decoration-line: underline;
+    text-decoration-color: #0554B6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input{
+    margin: 14px 0;
+    border-radius: 0;
+    border-COLOR: #CCCCCC;
+    border-style: outset;
+}
+hoja de estilo del agente de usuario
+
+.mdl-button.mdl-button--colored {
+    color:  rgb(154, 217, 239);
+}
+
+.mdl-button {
+    background: #0554B6;
+    border: 4px;
+    border-style: inset; 
+    height: 36px;
+    padding: 0 16px;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+   background: #0554B6;
+}
+.usuario{
+    height: 86px;
+    padding: 0 16px;
+    
+ }

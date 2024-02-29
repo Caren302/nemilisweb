@@ -1,0 +1,23 @@
+---------------------UNIDAD I:Conceptos clave para la creacion soluciones tecnologicas------------------------------
+
+--------------------TERMINO DE LA UNIDAD: 07/Abril/2023.
+
+--------------------TEMA I:Satisfaccion y necesidades del usuario:
+
+Las caracteristicas que hacen un proyecto sea exitoso son las areas de oportunidad con las que las actividades deben lograr el objetivo para garantizar el exito del mismo. 
+
+Las caracteristicas que aseguran el exito son las siguientes: 
+1.Objetivo: Tener bien definido un objetivo que sea claro y  preciso para poder idefntificar el alcance del proyecto.
+ 
+2. Estudio de mercado: Antes de iniciar un proyecto es necesario realizar un estudio de mercado para establecer si habra demanda del producto(Proyecto). MERCADOR META --> SATISFACCION DE USUARIO -->PROTOTIPO 
+
+3. Negociacion: Permite establecer directrices importantes como la duracion, el presupuesto y los requisitos.
+4.Metodologia: Identificar la metodologia adecuada tomando en cuenta la tecnologia a utilizar.
+ 
+5. Planeacion del proyecto: Es necesario iniciar con un plan definido que permita asignar actividades, tiempos especificos para la realizacion de las mismas. 
+
+6: Recursos:Eleccion del equipo de trabajo y el presupuesto con base a la tecnologia y metodologia a utilizar.
+
+----------------------UNIDAD II:Definicion de soluciones a partir de la innovacion incremental-----------------------
+----------------------UNIDAD III:Diseño de interaciones---------------------------------------------------------------------
+

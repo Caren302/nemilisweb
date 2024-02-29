@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registro clínico de enfermería</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/sweetalert2.css">
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/material.min.js" ></script>
+	<script src="js/sweetalert2.min.js" ></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script src="js/main.js" ></script>
+</head>
+<body>
+	<form action="index.php" method="post">
+	<section class="full-width container-notifications">
+		<div class="full-width container-notifications-bg btn-Notification"></div>
+	    <section class="NotificationArea">
+	        <div class="full-width text-center NotificationArea-title tittles">Advertencias<i class="zmdi zmdi-close btn-Notification"></i></div>
+	        <a href="#" class="Notification" id="notifation-unread-1">
+	            <div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
+	            <div class="Notification-text">
+	                <p>
+	                    <i class="zmdi zmdi-circle"></i>
+	                    <strong>Secretaria General... REVISANDO ESTADISTICAS</strong> 
+	                    <br>
+	                    <small>Justo Ahora</small>
+	                </p>
+	            </div>
+	        	<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-1">Notification as UnRead</div> 
+	        </a>
+	        <a href="#" class="Notification" id="notifation-read-1">
+	            <div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
+	            <div class="Notification-text">
+	                <p>
+	                    <i class="zmdi zmdi-circle-o"></i>
+	                    <strong>Nuevos Medicamentos</strong> 
+	                    <br>
+	                    <small>Justo Ahora</small>
+	                </p>
+	            </div>
+	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-1">Advertencia Leida</div>
+	        </a>
+	        <a href="#" class="Notifica_**tion" id="notifation-unread-2">
+	            <div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger
+"></i></div>
+	            <div class="Notification-text">
+	                <p>
+	                    <i class="zmdi zmdi-circle"></i>
+	                    <strong>Fluconazol ¡CADUCADO!</strong> 
+	                    <br>
+	                    <small>Hace 3 Minutos</small>
+	                </p>
+	            </div>
+	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-2">Advertencia no leida</div>
+	        </a> 
+	        <a href="#" class="Notification" id="notifation-read-2">
+	            <div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
+	            <div class="Notification-text">
+	                <p>
+	                    <i class="zmdi zmdi-circle-o"></i>
+	                    <strong>Calcitrion ¡AGOTADO!</strong> 
+	                    <br>
+	                    <small>Hace 1 Minuto</small>
+	                </p>
+	            </div>
+	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-2">Advertencia Leida</div>
+	        </a>
+	        <a href="#" class="Notification" id="notifation-read-3">
+	            <div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
+	            <div class="Notification-text">
+	                <p>
+	                    <i class="zmdi zmdi-circle-o"></i>
+	                    <strong>Bezafibrato ¡PRONTO A CADUCAR!</strong> 
+	                    <br>
+	                    <small>Hace 10 Minutos</small>
+	                </p>
+	            </div>
+	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-3">Advertencia Leida</div>
+	        </a>  
+	    </section>
+	</section>
+	</form>
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>	
+			<div class="mdl-tooltip" for="btn-menu">Menu</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="btn-Notification" id="notifications">
+						<i class="zmdi zmdi-notifications"></i>
+						
+						<div class="mdl-tooltip" for="notifications">Notifications</div>
+					</li>
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
+					</li>
+					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="noLink">
+						<figure>
+							<img src="assets/img/Logo 1_Mesa de trabajo 1_094320.png" alt="Avatar" class="img-responsive">
+						</figure>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div class="full-width navLateral-body-logo text-center tittles">
+				<i class="zmdi zmdi-close btn-menu"></i> Registro Enfermeros 
+			</div>
+			<figure class="full-width" style="height: 77px;">
+				<div class="navLateral-body-cl">
+
+					<img src="assets/img/avatar-female.png" alt="Avatar" class="img-responsive">
+				</div>
+				<figcaption class="navLateral-body-cr hide-on-tablet">
+					<span>
+						Ruth<br>
+						<small>Administrador</small>
+					</span>
+				</figcaption>
+			</figure>
+			<div class="full-width tittles navLateral-body-tittle-menu">
+				<i class="zmdi zmdi-lamp"></i><span class="hide-on-tablet">&nbsp; Nemisa</span>
+			</div>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="registronemisa.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-sort-amount-asc"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Registro
+							</div>
+						</a>
+					</li>
+					<li class="full-width">
+						<a href="viaadministracion.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-sort-amount-asc"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Registro Administración
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-library"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Formatos
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								
+									<a href="generado.html" class="full-width">
+										<div class="navLateral-body-cl">
+											<i class="zmdi zmdi-face"></i>
+										</div>
+										<div class="navLateral-body-cr hide-on-tablet">
+											Consultas
+										</div>
+									</a>
+									</ul>
+								</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a  class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-accounts"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Usuarios
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="doctores.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-accounts-add"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										Registrar Doctores
+									</div>
+									<a href="enfermeros.html" class="full-width">
+										<div class="navLateral-body-cl">
+											<i class="zmdi zmdi-mood"></i>
+										</div>
+										<div class="navLateral-body-cr hide-on-tablet">
+											Registrar Enfermeros
+										</div>
+									</a>
+						</a>
+						</ul>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a  class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-library"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Inventario
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="actualinventario.php" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-washing-machine"></i>
+									</div>
+									<div class="navLateral-body-cr hide-on-tablet">
+										Consultar inventario
+									</div>
+									<a href="entradas.html" class="full-width">
+										<div class="navLateral-body-cl">
+											<i class="zmdi zmdi-square-right"></i>
+										</div>
+										<div class="navLateral-body-cr hide-on-tablet">
+											Entradas inventario
+										</div>
+									</a>
+						<a href="salidas.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-long-arrow-left"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">
+								Salidas inventario
+							</div>
+						</a>
+						</ul>
+					</li>
+					
+	</section>
+	<section class="full-width pageContent">
+		<section class="full-width header-well">
+			<br/>
+				<pre> 
+					&nbsp; <h3 class="text-center tittles">Hoja de registros clinicos, esquema terapeutico de enfermería en paciente adulto.</h3>	
+				</pre>
+		</section>
+		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			<div class="mdl-tabs__tab-bar">
+			</div>
+			<div class="mdl-tabs__panel is-active" id="tabNewClient">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
+						<div class="full-width panel mdl-shadow--2dp">
+							<div class="full-width panel-tittle bg-primary text-center tittles">
+								Registro clínico de enfermería
+							</div>
+							<div class="full-width panel-content">
+								<form action="recetas.php" method="post">
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+										<label class="mdl-textfield__label" for="nombre">Nombre Completo </label>
+										<span class="mdl-textfield__error">Nombre Invalido</span>
+									</div>
+	                            <h6>Fecha de nacimiento:</h6>
+											<div class="mdl-textfield mdl-js-textfield">
+												<input type="date" class="mdl-textfield__input" name="date">
+											</div>
+											<h6>Número de seguro popular:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="numero" name="numero">
+										<label class="mdl-textfield__label" for="numero">Número  de seguro popular</label>
+										<span class="mdl-textfield__error">Número   de seguro popular Invalido</span> 
+									</div>
+									<h6>Número  de Expediente:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="numeroex" name="numeroex">
+										<label class="mdl-textfield__label" for="numeroex">Número  de expo</label>
+										<span class="mdl-textfield__error">Número  de expo invalido</span>
+									</div>
+									<h6>Talla:</h6>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="bolean" id="talla" name="talla">
+										<label class="mdl-textfield__label" for="talla">Talla</label>
+										<span class="mdl-textfield__error">Talla invalido</span>
+									</div>
+									<h6>Peso:</h6>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="peso" name="peso">
+										<label class="mdl-textfield__label" for="peso">Peso</label>
+										<span class="mdl-textfield__error">Peso invalido</span>
+									</div>
+									<h6>PA:</h6>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="pa" name="pa">
+										<label class="mdl-textfield__label" for="pa">PA</label>
+										<span class="mdl-textfield__error">PA invalido</span>
+									</div>
+									<h6>PC:</h6>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="pc" name="pc">
+										<label class="mdl-textfield__label" for="pc">PC</label>
+										<span class="mdl-textfield__error">PC invalido</span>
+									</div>
+									<h6>Edad:</h6>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="edad" name="edad">
+										<label class="mdl-textfield__label" for="edad">Edad</label>
+										<span class="mdl-textfield__error">Edad invalido</span>
+									</div>
+									
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="sexo">
+											<option value="" disabled="" selected="">Sexo</option>
+											<option value="M">M</option>
+											<option value="F">F</option>
+										</select>
+									</div>
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="alergias">
+											<option value="" disabled="" selected="">Alergias</option>
+											<option value="si">Si</option>
+											<option value="no">No</option>
+											<p><label><input type="text" name="cual"></label></p>
+										</select>
+									</div>
+									<h6>Servicio:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="servicio" name="servicio">
+										<label class="mdl-textfield__label" for="servicio">Servicio</label>
+										<span class="mdl-textfield__error">Servicio invalido</span>
+									</div>
+									<h6>No. Cama:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="cama" name="cama">
+										<label class="mdl-textfield__label" for="cama">No. Cama</label>
+										<span class="mdl-textfield__error">No. Cama invalido</span>
+									</div>
+									<h6>Medico tratante:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="medico" name="medico">
+										<label class="mdl-textfield__label" for="medico">Medico tratante</label>
+										<span class="mdl-textfield__error">Medico tratante invalido</span>
+									</div>
+									  <h6>Diagnostico Medico:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="diagnostico" name="diagnostico">
+										<label class="mdl-textfield__label" for="diagnostico">Diagnostico Medico</label>
+										<span class="mdl-textfield__error">Diagnostico invalido</span>
+									</div>
+									<h6>Dias de Hospitalizacion:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="dias" name="dias">
+										<label class="mdl-textfield__label" for="dias">Dias de Hospitalizacion</label>
+										<span class="mdl-textfield__error">Dias de Hospitalizacion</span>
+									</div>
+									<div class="full-width panel-tittle bg-primary text-center tittles">
+										Clasificacion del estado de salud
+									</div>
+									<table>
+									<P>Muy Grave:</P>
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="Muy Grave">
+											<option value="N/A" disabled="N/A" selected="N/A">N/A</option>
+											<option value="TM">TM</option>
+											<option value="TV">TV</option>
+											<option value="TN">TN</option>
+										</select>
+									</div>
+									<p>Grave:</p>
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="Muy Grave">
+											<option value="N/A" disabled="N/A" selected="N/A">N/A</option>
+											<option value="TM">TM</option>
+											<option value="TV">TV</option>
+											<option value="TN">TN</option>
+										</select>
+									</div>
+									<p>Delicado:</p>
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="Muy Grave">
+											<option value="TM" disabled="TM" selected="TM">TM</option>
+											<option value="TM">TM</option>
+											<option value="TV">TV</option>
+											<option value="TN">TN</option>
+										</select>
+									</div>
+									<p>Mejorado:</p>
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="Muy Grave">
+											<option value="N/A" disabled="N/A" selected="N/A">N/A</option>
+											<option value="TM">TM</option>
+											<option value="TV">TV</option>
+											<option value="TN">TN</option>
+										</select>
+										</table>
+									</div>
+									<div class="full-width panel-tittle bg-primary text-center tittles">
+										Grafica de signos vitales
+										
+									</div>
+
+									<h6>E.C:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="E.C" name="E.C">
+										<label class="mdl-textfield__label" for="E.C">E.C </label>
+										<span class="mdl-textfield__error">E.C invalida</span>
+									</div>
+									<h6>T.C:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="T.C" name="T.C">
+										<label class="mdl-textfield__label" for="T.C"> T.C</label>
+										<span class="mdl-textfield__error">T.C</span>
+
+
+									<h6>T/A ciastolica:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="T/A ciastolica" name="T/A ciastolica">
+										<label class="mdl-textfield__label" for="T/A ciastolica">T/A ciastolica </label>
+										<span class="mdl-textfield__error">T/A ciastolica</span>
+									</div>
+
+									<h6>T/A diastolica:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="T/A diastolica" name="T/A diastolica">
+										<label class="mdl-textfield__label" for="T/A diastolica">T/A diastolica </label>
+										<span class="mdl-textfield__error">T/A diastolica</span>
+									</div>
+
+								</div>
+								<h6>T/A media:</h6>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="number"  id="T/A media" name="T/A media">
+									<label class="mdl-textfield__label" for="T/A media">T/A media </label>
+									<span class="mdl-textfield__error">T/A media invalida</span>
+								</div>
+
+									<h6>F C_respiratoria:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="f_respiratoria" name="f_respiratoria">
+										<label class="mdl-textfield__label" for="f_respiratoria">f_respiratoria</label>
+										<span class="mdl-textfield__error">f_respiratoria invalida</span>
+									</div>
+									<h6>C. Temperatura:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="C_respiratoria" name="C_temperatura">
+										<label class="mdl-textfield__label" for="C_termperatura">C. Temperatura</label>
+										<span class="mdl-textfield__error">Temperatura Invalido</span>
+									</div>
+									<h6>Sa02:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="SaO2" name="SaO2">
+										<label class="mdl-textfield__label" for="SaO2">SaO2</label>
+										<span class="mdl-textfield__error">SaO2</span>
+									</div>
+									<h6>PVC:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="PVC" name="PVC">
+										<label class="mdl-textfield__label" for="PVC">PVC</label>
+										<span class="mdl-textfield__error">PVC</span>
+									</div>
+									<h6>Llenado Capilar:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="Llenado_capilar" name="Llenado capilar">
+										<label class="mdl-textfield__label" for="Llenado Capilar">Llenado capilar</label>
+										<span class="mdl-textfield__error">Llenado Capilar invalido</span>
+									</div>
+									<h6>Tipo de dieta:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="tipo_de_dieta" name="tipo_de_dieta">
+										<label class="mdl-textfield__label" for="Llenado Capilar">Tipo de dieta </label>
+										<span class="mdl-textfield__error">Tipo de dieta Invalido</span>
+									</div>
+									<h6>Dieta Ingerida:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="dieta ingerida" name="dieta ingerida">
+										<label class="mdl-textfield__label" for="Dieta ingerida">Dieta ingerida</label>
+										<span class="mdl-textfield__error">Dieta ingerida Invalida</span>
+									</div>
+									<h6>Glucemia:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="glucemia" name="glucemia">
+										<label class="mdl-textfield__label" for="glucemia">glucemia</label>
+										<span class="mdl-textfield__error">Glucemia</span>
+									</div>
+									<h6>Esquema Insulina:</h6>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="bool" id="insulina" name="insulina">
+										<label class="mdl-textfield__label" for="glucemia">Esquema insulina</label>
+										<span class="mdl-textfield__error">Esquema de insulina</span>
+									</div>
+
+									<div class="full-width panel-tittle bg-primary text-center tittles">
+										Prevencion de Ulceras
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield">
+										<select class="mdl-textfield__input" name="nivel de riesto">
+											<option value="" disabled="" selected="">Riesgo</option>
+											<option value="Alto">Alto</option>
+											<option value="Moderado">Moderado</option>
+											<option value="Moderado">Bajo</option>
+										</select>
+
+										<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text" id="acciones" name="acciones">
+											<label class="mdl-textfield__label" for="toma">Acciones a Realizar</label>
+											<span class="mdl-textfield__error">Acciones a Realizar</span>
+										</div>
+
+										<div class="full-width panel-tittle bg-primary text-center tittles">
+											Prevencion de Caidas
+										</div>
+	
+										<div class="mdl-textfield mdl-js-textfield">
+											<select class="mdl-textfield__input" name="nivel de riesto">
+												<option value="" disabled="" selected="">Riesgo</option>
+												<option value="Alto">Alto</option>
+												<option value="Moderado">Moderado</option>
+												<option value="Moderado">Bajo</option>
+											</select>
+	
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+												<input class="mdl-textfield__input" type="text" id="acciones" name="acciones">
+												<label class="mdl-textfield__label" for="toma">Acciones a Realizar</label>
+												<span class="mdl-textfield__error">Acciones a Realizar</span>
+											</div>
+
+									<div class="full-width panel-tittle bg-primary text-center tittles">
+										Glasoow
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="Respuesta Ocular" name="Respuesta Ocular">
+										<label class="mdl-textfield__label" for="Nombre">Respuesta Ocular</label>
+										<span class="mdl-textfield__error">Respuesta Ocular Invalida</span>
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number" id="acciones" name="acciones">
+										<label class="mdl-textfield__label" for="toma">Cantidad</label>
+										<span class="mdl-textfield__error">Acciones a Realizar</span>
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"  id="Respuesta_motora" name="Respuesta_Motora">
+										<label class="mdl-textfield__label" for="Respuesta Motora">Respuesta Motora</label>
+										<span class="mdl-textfield__error">Respuesta Motora Invalida</span>
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="Respuesta Verbal" name="Respuesta Verbal">
+										<label class="mdl-textfield__label" for="respuesta verbal">Respuesta Verbal</label>
+										<span class="mdl-textfield__error">Respuesta Verbal Invalida</span>
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="total" name="total"> 
+										<label class="mdl-textfield__label" for="sector">Total</label>
+										<span class="mdl-textfield__error">Total Invalido</span>
+									</div>
+
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text" id="acciones" name="acciones">
+										<label class="mdl-textfield__label" for="toma">Acciones a Realizar</label>
+										<span class="mdl-textfield__error">Acciones a Realizar</span>
+									</div>
+
+									<div class="full-width panel-tittle bg-primary text-center tittles">
+										Habitus exterior
+										</div>
+										<table class="default">
+
+											<form name="formulario" method="post" action="/send.php">
+												
+												<div class="mdl-textfield mdl-js-textfield">
+													<select class="mdl-textfield__input" name="sector">
+														<option value="" disabled="" selected="">Estado de alerta</option>
+														<option value="Activo">Activo</option>
+														<option value="Irritable">Irritable</option>
+														<option value="Sedado">Sedado</option>
+														<option value="Letargio">Letargio</option>
+														<option value="Estuporoso">Estuporoso</option>
+															
+													</select>
+												</div>
+
+												  <div class="mdl-textfield mdl-js-textfield">
+													<select class="mdl-textfield__input" name="sector">
+														<option value="" disabled="" selected="">Piel</option>
+														<option value="rosada">rosada</option>
+														<option value="palidez">palidez</option>
+														<option value="ictiricia">ictiricia</option>
+														<option value="rubicundez">rubicundez</option>
+														<option value="cianosis">cianosis</option>
+													</select>
+												</div>
+												<div class="mdl-textfield mdl-js-textfield">
+													<select class="mdl-textfield__input" name="sector">
+														<option value="" disabled="" selected="">Actitud</option>
+														<option value="cooperador">cooperador</option>
+														<option value="pasivo">pasivo</option>
+														<option value="apativo">apativo</option>
+														<option value="indiferencia">indiferencia</option>	
+													</select>
+
+													<div class="full-width panel-tittle bg-primary text-center tittles">
+														Valoracion
+														</div>
+														<table class="default">
+
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="textarea"  id="valoracion" name="valoracion">
+																<label class="mdl-textfield__label" for="valoracion"> Valoracion </label>
+																<span class="mdl-textfield__error">Valoracion</span>
+															</div>
+															<div class="full-width panel-tittle bg-primary text-center tittles">
+																Egresos
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="Vomito" name="Vomito"> 
+																<label class="mdl-textfield__label" for="sector">Vomito</label>
+																<span class="mdl-textfield__error">Vomito Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="sangrado" name="sangrado"> 
+																<label class="mdl-textfield__label" for="sector">Sangrado</label>
+																<span class="mdl-textfield__error">Sangrado Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="Succion (sonda Nasogastrica)" name="Succion"> 
+																<label class="mdl-textfield__label" for="sector">Succión</label>
+																<span class="mdl-textfield__error">Succión Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="penrose" name="penrose"> 
+																<label class="mdl-textfield__label" for="sector">Penrose</label>
+																<span class="mdl-textfield__error">Penrose Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="drenes" name="drenes"> 
+																<label class="mdl-textfield__label" for="sector">Drenes</label>
+																<span class="mdl-textfield__error">Drenes Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="uresis" name="uresis"> 
+																<label class="mdl-textfield__label" for="sector">Uresis</label>
+																<span class="mdl-textfield__error">Uresis Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="evacuacion" name="evacuacion"> 
+																<label class="mdl-textfield__label" for="sector">Evacuacion</label>
+																<span class="mdl-textfield__error">Evacuacion Invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="boolean" id="P_insensibles" name="P insensibles"> 
+																<label class="mdl-textfield__label" for="sector">P. insensibles</label>
+																<span class="mdl-textfield__error">P. insensibles invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="boolean" id="total_egre" name="total"> 
+																<label class="mdl-textfield__label" for="sector">Total</label>
+																<span class="mdl-textfield__error">Total invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="boolean" id="Balance" name="Balance"> 
+																<label class="mdl-textfield__label" for="sector">Balance de 24 horas</label>
+																<span class="mdl-textfield__error">Balance invalido</span>
+															</div>
+						
+															
+													<div class="full-width panel-tittle bg-primary text-center tittles">
+														Balance Hidrico
+													</div>
+													<table class="default">
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="Ingresos" id="number" name="Ingresos"> 
+															<label class="mdl-textfield__label" for="sector">Ingresos</label>
+															<span class="mdl-textfield__error">Ingresos invalidos</span>
+														</div>
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="alimentacion_enteral" name="alimentacion_enteral"> 
+															<label class="mdl-textfield__label" for="sector">Alimentacion Enteral</label>
+															<span class="mdl-textfield__error">Alimentacion Enteral Invalido</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="sol" name="sol"> 
+															<label class="mdl-textfield__label" for="sector">Sol</label>
+															<span class="mdl-textfield__error">Sol invalido</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="NPT" name="NPT"> 
+															<label class="mdl-textfield__label" for="sector">NPT</label>
+															<span class="mdl-textfield__error">NPT</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="Plasma" name="Plasma"> 
+															<label class="mdl-textfield__label" for="sector">Plasma</label>
+															<span class="mdl-textfield__error">Plasma</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="concentrado" name="Concentrado"> 
+															<label class="mdl-textfield__label" for="sector">Concentrado</label>
+															<span class="mdl-textfield__error">Concentrado</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="plaquetas" name="Plaquetas"> 
+															<label class="mdl-textfield__label" for="sector">Plaquetas</label>
+															<span class="mdl-textfield__error">Plaquetas</span>
+														</div>
+														
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="otros" name="otros"> 
+															<label class="mdl-textfield__label" for="sector">Otros</label>
+															<span class="mdl-textfield__error">Otros</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="medicamento_vo" name="medicamento_vo"> 
+															<label class="mdl-textfield__label" for="sector">Medicamento V.O.</label>
+															<span class="mdl-textfield__error">Medicamento V.O invalido</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="medicamento_iv" name="medicamento_IV"> 
+															<label class="mdl-textfield__label" for="sector">Medicamento I.V</label>
+															<span class="mdl-textfield__error">Medicamento I.V. invalido</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="otros" name="otros"> 
+															<label class="mdl-textfield__label" for="sector">Otros</label>
+															<span class="mdl-textfield__error">Otros</span>
+														</div>
+
+														<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+															<input class="mdl-textfield__input" type="number" id="total" name="total"> 
+															<label class="mdl-textfield__label" for="sector">Total</label>
+															<span class="mdl-textfield__error">Total</span>
+														</div>
+
+													<div class="full-width panel-tittle bg-primary text-center tittles">
+														Soluciones parentales NPT y Hemoderivadas
+														</div>
+														<table class="default">
+				
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">1- </label>
+																<span class="mdl-textfield__error">1-</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">volumen  </label>
+																<span class="mdl-textfield__error">volumen</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">tiempo de infusion  </label>
+																<span class="mdl-textfield__error">tiempo de infusion</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="date"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">fecha</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de termino </span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">2- </label>
+																<span class="mdl-textfield__error">2-</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">volumen  </label>
+																<span class="mdl-textfield__error">volumen</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre"> tiempo de infusion </label>
+																<span class="mdl-textfield__error">tiempo de infusion</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="date"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">fecha</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de termino </span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">3- </label>
+																<span class="mdl-textfield__error">3-</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">volumen  </label>
+																<span class="mdl-textfield__error">volumen</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre"> tiempo de infusion </label>
+																<span class="mdl-textfield__error">tiempo de infusion</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="date"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">fecha</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre"> </label>
+																<span class="mdl-textfield__error">hora de</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de termino </span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">4- </label>
+																<span class="mdl-textfield__error">4-</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">volumen  </label>
+																<span class="mdl-textfield__error">volumen</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre"> tiempo de infusion </label>
+																<span class="mdl-textfield__error">tiempo de infusion</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="date"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">fecha  </label>
+																<span class="mdl-textfield__error">fecha</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre"> </label>
+																<span class="mdl-textfield__error">hora de</span>
+															</div>
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="time"  id="nombre" name="nombre_medico">
+																<label class="mdl-textfield__label" for="nombre">  </label>
+																<span class="mdl-textfield__error">hora de termino </span>
+															</div>
+				
+															<div class="full-width panel-tittle bg-primary text-center tittles">
+																Medicamentos
+															</div>
+														
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="Nombre" name="Nombre"> 
+																<label class="mdl-textfield__label" for="sector">Nombre</label>
+																<span class="mdl-textfield__error">Nombre</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="Intervalo cantidad" name="Intervalo cantidad"> 
+																<label class="mdl-textfield__label" for="sector">Intervalo de cantidad</label>
+																<span class="mdl-textfield__error">Intervalo de cantidad invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="Balance" name="Balance"> 
+																<label class="mdl-textfield__label" for="sector">Intervalo de Tiempo </label>
+																<span class="mdl-textfield__error">Intervalo de tiempo invalido</span>
+															</div>
+															
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="Balance" name="Balance"> 
+																<label class="mdl-textfield__label" for="sector">Via</label>
+																<span class="mdl-textfield__error">Via invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="b" id="h_aplicacion" name="hora Aplicacion"> 
+																<label class="mdl-textfield__label" for="sector">Horario de Aplicacion</label>
+																<span class="mdl-textfield__error">Horario de Aplicacion invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="number" id="t_infucion" name="Infucion"> 
+																<label class="mdl-textfield__label" for="sector">Tiempo de Infucion</label>
+																<span class="mdl-textfield__error">Tiempo de Infucion invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="PTE" name="PTE"> 
+																<label class="mdl-textfield__label" for="sector">PTE</label>
+																<span class="mdl-textfield__error">PTE invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="MED" name="MED"> 
+																<label class="mdl-textfield__label" for="sector">MED</label>
+																<span class="mdl-textfield__error">MED invalidO</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="dosis" name="dosis"> 
+																<label class="mdl-textfield__label" for="sector">Dosis</label>
+																<span class="mdl-textfield__error">Dosis invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="VIA" name="VIA"> 
+																<label class="mdl-textfield__label" for="sector">VIA</label>
+																<span class="mdl-textfield__error">VIA invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="horario" name="horario"> 
+																<label class="mdl-textfield__label" for="sector">Horario</label>
+																<span class="mdl-textfield__error">Horario invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="REG" name="REG"> 
+																<label class="mdl-textfield__label" for="sector">REG</label>
+																<span class="mdl-textfield__error">REG invalido</span>
+															</div>
+						
+															<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																<input class="mdl-textfield__input" type="text" id="doble_chequeo" name="doble_chequeo"> 
+																<label class="mdl-textfield__label" for="sector">Doble Chequeo</label>
+																<span class="mdl-textfield__error">Doble Chequeo invalido</span>
+															</div>
+						
+															<div class="full-width panel-tittle bg-primary text-center tittles">
+																Oxigenoterapial 
+																</div>
+																<table class="default">
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																		<label class="mdl-textfield__label" for="nombre">O2 x'(puntas nasales)</label>
+																		<span class="mdl-textfield__error">O2 x'(puntas nasales) </span>
+																	</div>
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																		<label class="mdl-textfield__label" for="nombre">O2 x'(mascarillas)</label>
+																		<span class="mdl-textfield__error">O2 x'(mascarillas) </span>
+																	</div>
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																		<label class="mdl-textfield__label" for="nombre">Nebulizador con mascarilla %</label>
+																		<span class="mdl-textfield__error">Nebulizador con mascarilla %</span>
+																	</div>
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text"  id="nombre" name="nombre_medico">
+																		<label class="mdl-textfield__label" for="nombre">otros</label>
+																		<span class="mdl-textfield__error">otros</span>
+																	</div>
+																	<div class="full-width panel-tittle bg-primary text-center tittles">
+																		Micronebulizaciones
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="medicamento" name="medicamento"> 
+																		<label class="mdl-textfield__label" for="sector">Medicamento</label>
+																		<span class="mdl-textfield__error">Medicamento invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="horario" name="horario"> 
+																		<label class="mdl-textfield__label" for="sector">Horario</label>
+																		<span class="mdl-textfield__error">Horario invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="observaciones" name="observaciones"> 
+																		<label class="mdl-textfield__label" for="sector">Observaciones</label>
+																		<span class="mdl-textfield__error">Observaciones invalido</span>
+																	</div>
+								
+																	<div class="full-width panel-tittle bg-primary text-center tittles">
+																		Intervenciones Interpendientes
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="rayos_x" name="rayos X"> 
+																		<label class="mdl-textfield__label" for="sector">Rayos X</label>
+																		<span class="mdl-textfield__error">Rayos X invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="laboratorio" name="laboratorio"> 
+																		<label class="mdl-textfield__label" for="sector">Laboratorio</label>
+																		<span class="mdl-textfield__error">Laboratorio invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="estudio_histopatologico" name="estudio_histopatologico"> 
+																		<label class="mdl-textfield__label" for="sector">Estudio Histopatologico</label>
+																		<span class="mdl-textfield__error">Estudio Histopastologico</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="ultrasonido" name="ultrasonido"> 
+																		<label class="mdl-textfield__label" for="sector">Ultrasonido</label>
+																		<span class="mdl-textfield__error">Ultrasonido invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="T.A.C" name="T.A.C"> 
+																		<label class="mdl-textfield__label" for="sector">T.A.C</label>
+																		<span class="mdl-textfield__error">T.A.C invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="otros" name="otros"> 
+																		<label class="mdl-textfield__label" for="sector">otros</label>
+																		<span class="mdl-textfield__error">Otros invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="resultado" name="resultado"> 
+																		<label class="mdl-textfield__label" for="sector">Resultado</label>
+																		<span class="mdl-textfield__error">Resultado invalido</span>
+																	</div>
+								
+																	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+																		<input class="mdl-textfield__input" type="text" id="observaciones" name="observaciones"> 
+																		<label class="mdl-textfield__label" for="sector">Observaciones</label>
+																		<span class="mdl-textfield__error">Observaciones invalido</span>
+																	</div>
+								
+				
+
+												</div>
+												</fieldset>
+											  </form>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+							
+							<center>
+								<a class="mdl-button mdl-button--raised mdl-button--colored" href="pdf.php"><i class="fa fa-download"></i>Generar</a>
+							</center>
+					</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
