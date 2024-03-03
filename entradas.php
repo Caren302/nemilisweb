@@ -456,7 +456,7 @@
 										<span class="mdl-textfield__error">Nombre Obligatorio</span>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="presentacion" name="presentacion" required>
+										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="presentacion" name="presentacion" required>
 										<label class="mdl-textfield__label" for="presentacion">Presentación(ML/MG):</label>
 										<span class="mdl-textfield__error">Presentación obligatoria</span>
 									</div>

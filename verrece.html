@@ -301,6 +301,7 @@
 			<div class="mdl-tabs__tab-bar">
 				<a href="#tabNewClient" class="mdl-tabs__tab is-active">Buscar paciente</a>
 				<a href="#tabListClient" class="mdl-tabs__tab">Consultar receta</a>
+				<a href="#tabrecClient" class="mdl-tabs__tab">Recordatorios</a>
 			</div>
 			<div class="mdl-tabs__panel is-active" id="tabNewClient">
 				<div class="mdl-grid">
@@ -339,6 +340,66 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="mdl-tabs__panel is-active" id="tabrecClient">
+				<style>
+					body {
+						font-family: Arial, sans-serif;
+					}
+					form {
+						max-width: 400px;
+						margin: 0 auto;
+					}
+					label {
+						display: block;
+						margin-bottom: 5px;
+					}
+					input[type="text"], input[type="date"], select, textarea {
+						width: 100%;
+						padding: 8px;
+						margin-bottom: 10px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						box-sizing: border-box;
+					}
+					input[type="submit"] {
+						background-color: #4CAF50;
+						color: white;
+						padding: 10px 20px;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+						font-size: 16px;
+					}
+					input[type="submit"]:hover {
+						background-color: #45a049;
+					}
+				</style>
+				<form action="procesar_formulario.php" method="POST">
+					<label for="nombre">Nombre del Medicamento:</label>
+					<input type="text" id="nombre" name="nombre" required>
+				
+					<label for="fecha_inicio">Fecha de Inicio:</label>
+					<input type="date" id="fecha_inicio" name="fecha_inicio" required>
+				
+					<label for="hora_toma">Hora de Toma:</label>
+					<input type="time" id="hora_toma" name="hora_toma" required>
+				
+					<label for="frecuencia">Frecuencia:</label>
+					<select id="frecuencia" name="frecuencia" required>
+						<option value="diario">Diario</option>
+						<option value="semanal">Semanal</option>
+						<option value="mensual">Mensual</option>
+					</select>
+				
+					<label for="notas">Notas Adicionales:</label>
+					<textarea id="notas" name="notas" rows="4"></textarea>
+				
+					<input type="submit" value="Guardar Recordatorio">
+				</form>
+			</div>
+			
+			
 			<div class="mdl-tabs__panel" id="tabListClient">
 				<div>
 					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">

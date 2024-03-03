@@ -9,6 +9,7 @@
 		die("Fallo:(".$conexion->mysqli_connect_errno().")".$conexion-> mysqli_connect_errno());
 	}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -437,11 +438,98 @@
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 							<i class="zmdi zmdi-search"></i>
 							<input type="text" name="buscar"  style="WIDTH: 780px; "size=32 name=text1> &nbsp;       
-                               <input class="mdl-button mdl-button--raised mdl-button--colored" style="WIDTH: 120px; style="margin-left: 10px" type="submit" value="Buscar">
+                               <input class="mdl-button mdl-button--raised mdl-button--colored" style="WIDTH: 120px"; style="margin-left: 10px" type="submit" value="Buscar">
 							</div>
                             </form>
                             <br><br><br> 
-                              
+							<?php
+
+								// Función para obtener los medicamentos a punto de caducar
+								function obtenerMedicamentosACaducar()
+								{
+									// Conexión a la base de datos
+									$bd_host = "127.0.0.1";
+									$bd_user = "root";
+									$bd_pass = "";
+									$bd_name = "inventario";
+									$conexion = new mysqli($bd_host, $bd_user, $bd_pass, $bd_name);
+									if ($conexion->connect_errno) {
+										die("Fallo:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_errno());
+									}
+
+									// Array para almacenar los nombres de los medicamentos a caducar
+									$medicamentosACaducar = array();
+
+									// Consulta SQL para obtener los medicamentos
+									$query = "SELECT nombre, fecha FROM medicamentos";
+
+									// Ejecutar la consulta
+									$result = $conexion->query($query);
+
+									// Verificar si hay resultados
+									if ($result->num_rows > 0) {
+										// Iterar sobre los resultados
+										while ($row = $result->fetch_assoc()) {
+											// Obtener la fecha de caducidad del medicamento y convertirla a timestamp
+											$fechaCaducidad = strtotime($row['fecha']);
+
+											// Calcular la fecha actual y la fecha dentro de dos semanas
+											$fechaActual = time();
+											$dosSemanasDespues = strtotime('+2 weeks', $fechaActual);
+
+											// Si la fecha actual es mayor a la fecha de caducidad menos dos semanas
+											if ($fechaActual > ($fechaCaducidad - (2 * 7 * 24 * 60 * 60))) {
+												// Agregar el nombre del medicamento al array de medicamentos a caducar
+												$medicamentosACaducar[] = $row;
+											}
+										}
+									}
+
+									// Cerrar la conexión a la base de datos
+									$conexion->close();
+
+									// Devolver el array de medicamentos a caducar
+									return $medicamentosACaducar;
+								}
+
+								// Ejecutar la función y obtener los medicamentos a caducar
+								$medicamentosACaducar = obtenerMedicamentosACaducar();
+
+								?>
+									<style>
+										table {
+											width: 100%;
+											border-collapse: collapse;
+										}
+										th, td {
+											border: 1px solid #ddd;
+											padding: 8px;
+											text-align: left;
+										}
+										th {
+											background-color: #f2f2f2;
+										}
+									</style>
+
+								<h3>Medicamentos a caducar dentro de las próximas dos semanas:</h3>
+
+								<?php if (empty($medicamentosACaducar)): ?>
+									<p>No hay medicamentos a caducar en las próximas dos semanas.</p>
+								<?php else: ?>
+									<table>
+										<tr>
+											<th>Nombre del Medicamento</th>
+											<th>Fecha de Caducidad</th>
+										</tr>
+										<?php foreach ($medicamentosACaducar as $medicamento): ?>
+											<tr>
+												<td><?php echo $medicamento['nombre']; ?></td>
+												<td><?php echo $medicamento['fecha']; ?></td>
+											</tr>
+										<?php endforeach; ?>
+									</table>
+								<?php endif; ?>
+
 							<div>
 							<form method = "post">
 									<div class="mdl-cell mdl-cell--2-col-phone mdl-cell--4-col-tablet mdl-cell--1-col-desktop"  style="display : flex;flex-direction : row;">
@@ -451,6 +539,7 @@
 												<th>Presentacion</th>
 												<th>Categoria</th>
 												<th>Lote</th>
+												<th>Fecha</th>
                                                 <th>Cantidad</th>
 												<th>Seleccionar</th>
 											</tr></thead><tbody>
@@ -475,6 +564,7 @@
 												<td>".$fila['categoria']."</td>
 												<td>".$fila['lote']."</td>
 												<td>".$fila['sector']."</td>
+												<td>".$fila['fecha']."</td>
                                                 <td>".$fila['cantidad']."</td>
 												</td><td><input type='checkbox' id='cbox1' name='eliminar[]' value='".$fila['id']."'></td>
 												";
@@ -496,7 +586,7 @@
 
 								?>
 									</form>
-        
+
 								<?php
 
 									$bd_host = "127.0.0.1";
