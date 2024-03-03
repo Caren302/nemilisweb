@@ -1,5 +1,5 @@
 <?php
-// Conexión a la base de datos (asumiendo que ya tienes la conexión configurada)
+// Conexión a la base de datos 
 $conexion = new mysqli("127.0.0.1", "usuario", "contraseña", "inventario");
 
 // Verificar la conexión
@@ -20,9 +20,7 @@ $html_recordatorios = '';
 
 // Verificar si hay recordatorios pendientes
 if ($resultado->num_rows > 0) {
-    // Iterar sobre los recordatorios pendientes
     while ($row = $resultado->fetch_assoc()) {
-        // Construir el HTML para cada recordatorio
         $html_recordatorios .= '
         <a href="#" class="Notification">
             <div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-warning"></i></div>

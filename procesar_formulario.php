@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error al guardar el recordatorio: " . $conexion->error;
         }
 
-        // Cerrar la declaración
         $stmt->close();
     } else {
         echo "Error en la preparación de la consulta: " . $conexion->error;
