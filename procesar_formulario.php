@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Ejecutar la consulta
         if ($stmt->execute()) {
-            header("location: verrece.html");
+            header("location: verrece.php");
         } else {
             echo "Error al guardar el recordatorio: " . $conexion->error;
         }

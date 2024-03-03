@@ -366,7 +366,7 @@
 											Perfil pacientes
 										</div>
 									</a>
-						<a href="Verrece.html" class="full-width">
+						<a href="Verrece.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-web"></i>
 							</div>
@@ -453,7 +453,6 @@
                             foreach ($conMySQL->query($sentenciaSQL) as $fila) {
                                 echo "
                                 <div class='product-item'>
-                                    <p><strong>ID:</strong> " . $fila['id'] . "</p>
                                     <p><strong>Nombre:</strong> " . $fila['nombre'] . "</p>
                                     <p><strong>Dirección:</strong> " . $fila['direccion'] . "</p>
                                     <p><strong>Teléfono:</strong> " . $fila['telefono'] . "</p>

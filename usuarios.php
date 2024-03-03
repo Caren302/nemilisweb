@@ -246,7 +246,7 @@
 											Perfil pacientes
 										</div>
 									</a>
-						<a href="Verrece.html" class="full-width">
+						<a href="Verrece.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-web"></i>
 							</div>

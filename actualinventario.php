@@ -367,7 +367,7 @@
 											Perfil pacientes
 										</div>
 									</a>
-						<a href="Verrece.html" class="full-width">
+						<a href="Verrece.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-web"></i>
 							</div>
@@ -443,7 +443,6 @@
                             </form>
                             <br><br><br> 
 							<?php
-
 								// Función para obtener los medicamentos a punto de caducar
 								function obtenerMedicamentosACaducar()
 								{
