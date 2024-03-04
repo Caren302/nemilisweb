@@ -114,7 +114,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="text-condensedLight noLink" ><small>Paciente</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/avatar-female.png" alt="Avatar" class="img-responsive">
@@ -234,7 +234,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="text-condensedLight noLink" ><small>Paciente</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/avatar-female.png" alt="Avatar" class="img-responsive">
@@ -258,7 +258,7 @@
 				<figcaption class="navLateral-body-cr hide-on-tablet">
 					<span>
 						Ruth<br>
-						<small>Administrador</small>
+						<small>Paciente</small>
 					</span>
 				</figcaption>
 			</figure>
@@ -414,7 +414,7 @@
 								Salidas inventario
 							</div>
 						</a>
-						<a href="Estadisticas.html" class="full-width">
+						<a href="estadisticas.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-long-arrow-left"></i>
 							</div>

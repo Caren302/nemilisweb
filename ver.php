@@ -1,20 +1,9 @@
-<?php
-
-    $bd_host = "127.0.0.1";
-	$bd_user = "root";
-	$bd_pass = "";
-	$bd_name = "inventario";
-	$conexion = new mysqli($bd_host,$bd_user,$bd_pass,$bd_name);
-	if($conexion-> connect_errno){
-		die("Fallo:(".$conexion->mysqli_connect_errno().")".$conexion-> mysqli_connect_errno());
-	}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Administratores</title>
+	<title>Consultar Receta</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -29,7 +18,7 @@
 	<script src="js/main.js" ></script>
 </head>
 <body>
-<form action="inicio.php" method="post">
+	<form action="index.php" method="post">
 	<section class="full-width container-notifications">
 		<div class="full-width container-notifications-bg btn-Notification"></div>
 	    <section class="NotificationArea">
@@ -116,32 +105,33 @@
 					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
 					<li class="noLink">
 						<figure>
-							<img src="assets/img/usuario.png" alt="Avatar" class="img-responsive">
+							<img src="assets/img/avatar-female.png" alt="Avatar" class="img-responsive">
 						</figure>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</div>
-	<section class="full-width navLateral">
+<section class="full-width navLateral">
 		<div class="full-width navLateral-bg btn-menu"></div>
 		<div class="full-width navLateral-body">
 			<div class="full-width navLateral-body-logo text-center tittles">
-				<i class="zmdi zmdi-close btn-menu"></i> 
+				<i class="zmdi zmdi-close btn-menu"></i> Registro Administradores
 			</div>
-			<figure class="full-width" style="height: 80px;">
+			<figure class="full-width" style="height: 77px;">
 				<div class="navLateral-body-cl">
-					<img src="assets/img/saludM.png" class="img-responsive">
+
+					<img src="assets/img/avatar-female.png" alt="Avatar" class="img-responsive">
 				</div>
 				<figcaption class="navLateral-body-cr hide-on-tablet">
-					<span style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-						NEMILIS<br>
-						<small>Sistema de Inventario</small>
+					<span>
+						Ruth<br>
+						<small>Administrador</small>
 					</span>
 				</figcaption>
 			</figure>
 		<div class="full-width tittles navLateral-body-tittle-menu">
-		<i class="zmdi zmdi-view-web"></i><span class="hide-on-tablet">&nbsp; Receta</span>
+				<i class="zmdi zmdi-lamp"></i><span class="hide-on-tablet">&nbsp; Nemilis</span>
 			</div>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
@@ -159,7 +149,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="listadmin.php" class="full-width">
+								<a href="administrador.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-account-add"></i>
 									</div>
@@ -168,7 +158,7 @@
 									</div>
 								</a>
 							</li>
-							<a href="listadmin.php" class="full-width">
+							<a href="listadmin.php"  class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-account-circle"></i>
 									</div>
@@ -206,7 +196,7 @@
 										<div class="navLateral-body-cr hide-on-tablet">
 											Perfil médico
 										</div>
-										<a href="nueRece.html" class="full-width">
+										<a href="Nuevareceta.php" class="full-width">
 											<div class="navLateral-body-cl">
 												<i class="zmdi zmdi-view-web"></i>
 											</div>
@@ -306,107 +296,254 @@
 		</div>
 	</section>
 	</section>
+	
 	<section class="full-width pageContent">
-		<br>
-		<div class="receta">
-        <div class="encabezado">
-
-            <h3>Receta Médica</h3>
-        </div>
-        <div class="informacion-paciente"><center><i style="text-decoration: underline grey 2px; font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Datos del paciente</i></center>
-        	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="number" id="nss" name="nss" required>
-			<label class="mdl-textfield__label" for="nss">Nss:</label>
+			<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			<div class="mdl-tabs__tab-bar">
+				<a href="#tabNewClient" class="mdl-tabs__tab is-active">Buscar paciente</a>
+				<a href="#tabListClient" class="mdl-tabs__tab">Consultar receta</a>
+				<a href="#tabrecClient" class="mdl-tabs__tab">Recordatorios</a>
 			</div>
-        	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="text" id="nombre" name="nombre" required>
-			<label class="mdl-textfield__label" for="nombre">Nombre de usuario</label>
+			
+			<div class="mdl-tabs__panel is-active" id="tabNewClient">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
+						<div class="full-width panel mdl-shadow--2dp">
+							<div class="full-width panel-tittle bg-primary text-center tittles">
+								Paciente
+							</div> 
+							<div class="full-width panel-content">
+								<form>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"  id="nombre">
+										<label class="mdl-textfield__label" for="nombre">Nombre </label>
+										<span class="mdl-textfield__error">Nombre Invalido</span>
+									</div>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"  id="apellidos">
+										<label class="mdl-textfield__label" for="apellidos">Apellidos</label>
+										<span class="mdl-textfield__error">Apellidos Invalida</span>
+									</div>
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="number"  id="nss">
+										<label class="mdl-textfield__label" for="nss">NSS</label>
+										<span class="mdl-textfield__error">NSS Invalido</span> 
+									</div>
+									<h6>Fecha de cita médica</h6>
+											<div class="mdl-textfield mdl-js-textfield">
+												<input type="date" class="mdl-textfield__input">
+											</div>
+								</form>
+							<center>
+								<button class="mdl-button mdl-button--raised mdl-button--colored">Buscar receta</button>
+								<center>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="number" id="edad" name="edad" required>
-			<label class="mdl-textfield__label" for="edad">Edad:</label>
+
+			<div class="mdl-tabs__panel is-active" id="tabrecClient">
+			<?php
+				// Función para obtener los recordatorios de la toma de medicamentos
+				function obtenerRecordatorios()
+				{
+					// Conexión a la base de datos
+					$bd_host = "127.0.0.1";
+					$bd_user = "root";
+					$bd_pass = "";
+					$bd_name = "inventario";
+					$conexion = new mysqli($bd_host, $bd_user, $bd_pass, $bd_name);
+					if ($conexion->connect_errno) {
+						die("Fallo:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_errno());
+					}
+
+					// Array para almacenar los recordatorios
+					$recordatorios = array();
+
+					// Consulta SQL para obtener los recordatorios
+					$query = "SELECT nombre, fecha_inicio, hora_toma, frecuencia, notas FROM recordatorios";
+
+					// Ejecutar la consulta
+					$result = $conexion->query($query);
+
+					// Verificar si hay resultados
+					if ($result->num_rows > 0) {
+						while ($row = $result->fetch_assoc()) {
+							// Agregar el recordatorio al array de recordatorios
+							$recordatorios[] = $row;
+						}
+					}
+
+					// Cerrar la conexión a la base de datos
+					$conexion->close();
+
+					// Devolver el array de recordatorios
+					return $recordatorios;
+				}
+
+				// Ejecutar la función y obtener los recordatorios
+				$recordatorios = obtenerRecordatorios();
+				?>
+				<style>
+					table {
+						width: 100%;
+						border-collapse: collapse;
+					}
+
+					th,
+					td {
+						border: 1px solid #ddd;
+						padding: 8px;
+						text-align: left;
+					}
+
+					th {
+						background-color: #f2f2f2;
+					}
+				</style>
+
+				<h3>Recordatorios de Toma de Medicamentos:</h3>
+
+				<?php if (empty($recordatorios)): ?>
+					<p>No hay recordatorios de toma de medicamentos.</p>
+				<?php else: ?>
+					<table>
+						<tr>
+							<th>Nombre del Medicamento</th>
+							<th>Fecha de Inicio</th>
+							<th>Hora de Toma</th>
+							<th>Frecuencia</th>
+							<th>Notas</th>
+						</tr>
+						<?php foreach ($recordatorios as $recordatorio): ?>
+							<tr>
+								<td><?php echo $recordatorio['nombre']; ?></td>
+								<td><?php echo $recordatorio['fecha_inicio']; ?></td>
+								<td><?php echo $recordatorio['hora_toma']; ?></td>
+								<td><?php echo $recordatorio['frecuencia']; ?></td>
+								<td><?php echo $recordatorio['notas']; ?></td>
+							</tr>
+						<?php endforeach; ?>
+					</table>
+				<?php endif; ?>
+
+				<style>
+					body {
+						font-family: Arial, sans-serif;
+					}
+					form {
+						max-width: 400px;
+						margin: 0 auto;
+					}
+					label {
+						display: block;
+						margin-bottom: 5px;
+					}
+					input[type="text"], input[type="date"], select, textarea {
+						width: 100%;
+						padding: 8px;
+						margin-bottom: 10px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						box-sizing: border-box;
+					}
+					input[type="submit"] {
+						background-color: #4CAF50;
+						color: white;
+						padding: 10px 20px;
+						border: none;
+						border-radius: 4px;
+						cursor: pointer;
+						font-size: 16px;
+					}
+					input[type="submit"]:hover {
+						background-color: #45a049;
+					}
+				</style>
+				<form action="procesar_formulario.php" method="POST">
+					<label for="nombre">Nombre del Medicamento:</label>
+					<input type="text" id="nombre" name="nombre" required>
+				
+					<label for="fecha_inicio">Fecha de Inicio:</label>
+					<input type="date" id="fecha_inicio" name="fecha_inicio" required>
+				
+					<label for="hora_toma">Hora de Toma:</label>
+					<input type="time" id="hora_toma" name="hora_toma" required>
+				
+					<label for="frecuencia">Frecuencia:</label>
+					<select id="frecuencia" name="frecuencia" required>
+						<option value="diario">Diario</option>
+						<option value="semanal">Semanal</option>
+						<option value="mensual">Mensual</option>
+					</select>
+				
+					<label for="notas">Notas Adicionales:</label>
+					<textarea id="notas" name="notas" rows="4"></textarea>
+				
+					<input type="submit" value="Guardar Recordatorio">
+				</form>
 			</div>
-        </div>
-
-        <div class="medicamentos">
-            <center><i style="text-decoration: underline grey 2px; font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Asignscion medica</i></center>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="text" id="nombre" name="nombre" required>
-			<label class="mdl-textfield__label" for="nombre">Nombre:</label>
+			
+			
+			<div class="mdl-tabs__panel" id="tabListClient">
+				<div>
+					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+							<div class="full-width panel-tittle bg-success text-center tittles">
+							Datos de Receta
+							</div><br/>
+							<table  class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+								<thead>
+								<tr>
+									<td style="text-align: center;">Médico</td>
+									<td style="text-align: center;">Paciente</td>
+									<td style="text-align: center;">Observaciones</td>
+									<td style="text-align: center;" >Medicamentos</td>
+								</tr>
+								</thead>
+								<tr bgcolor="#FBFCFC">
+									<td style="text-align: left">Antonio Lopez</td>
+									<td style="text-align: left;">Monica Gutierrez</td>
+									<td style="text-align: left;">36°</td>
+									<td style="text-align: left;">Azitromicina</td>
+								</tr>
+								<tr bgcolor="#FBFCFC">
+									<td style="text-align: left;">1203919281312</td>
+									<td style="text-align: left;">Femenino</td>
+									<td style="text-align: left;">Ninguna</td>
+									<td style="text-align: left;">500mg</td>
+								</tr>
+								<tr bgcolor="#FBFCFC">
+									<td style="text-align: left;">03/08/2022</td>
+									<td style="text-align: left;">60 kg</td>
+									<td style="text-align: left;">Tos seca, ardor de garganta y dolores nusculares</td>
+									<td style="text-align: left;">4 Capsulas</td>
+								</tr>
+								<tr bgcolor="#FBFCFC">
+									<td style="text-align: left;">025</td>
+									<td style="text-align: left;">20 años</td>
+									<td style="text-align: left;">Dolor de cabeza</td>
+									<td style="text-align: left;">Antibioticos</td>
+								</tr>
+								<tr bgcolor="#FBFCFC">
+									<td style="text-align: left;">Santa Maria Nativitas</td>
+									<td style="text-align: left;">M334I23G78O9210</td>
+									<td style="text-align: left;">60</td>
+									<td style="text-align: left;">1 c/8 horas por una semana</td>
+								</tr>
+							</table><br/>
+						<center>
+							<button> <a class="mdl-button mdl-button--raised mdl-button--colored" href="pdf.php"><i class="fa fa-download"></i>Descargar archivo PDF</a></button>
+						</center>
+						</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-        	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="text" id="dosis" name="frecuencia" required>
-			<label class="mdl-textfield__label" for="frecuencia">Nombre de usuario</label>
-			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input"type="number" id="edad" name="edad" required>
-			<label class="mdl-textfield__label" for="edad">Edad:</label>
-			</div>
-        </div>
-    </div>
-    </div>
-</section>
-	<style>
-body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .receta {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .encabezado {
-            text-align: center;
-            background-color: #0554B6 !important;
-            height: 35px;
-            padding: 10px;
-    		display: block;
-   			line-height: 5px;
-    		color: #fff;
-    		font-size: 10px;
-        }
-
-        .encabezado h3 {
-            margin: 1PX;
-            color: #fff;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-        .informacion-paciente {
-            margin-top: 10px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-        }
-
-        .informacion-paciente p {
-            margin: 0;
-        }
-
-        .medicamentos {
-            margin-top: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-</style>
+		</div>
+	</section>
 </body>
 </html>

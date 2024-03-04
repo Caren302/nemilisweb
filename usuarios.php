@@ -293,7 +293,7 @@
 								Salidas inventario
 							</div>
 						</a>
-						<a href="estadisticas.html" class="full-width">
+						<a href="estadisticas.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-long-arrow-left"></i>
 							</div>
