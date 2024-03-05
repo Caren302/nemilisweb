@@ -22,17 +22,19 @@
             $numRegistros = $sentenciaPrep->rowCount();
             echo $numRegistros;
  
-            if($numRegistros !=0)
-            {
-                session_start();
-                $_SESSION["usuario"]=$_POST["usuario"];
-                header("Location:inicio.html");
-                printf("error");
-            }
-            else
-            {
-
-                header("Location:principal.html");
+            if ($numRegistros != 0) {
+                if ($_POST["usuario"] === 'monica') {
+                    $_SESSION["usuario"] = $_POST["usuario"];
+                    header("Location: paciente.php");
+                    exit();
+                } else {
+                    $_SESSION["usuario"] = $_POST["usuario"];
+                    header("Location: inicio.html");
+                    exit(); 
+                }
+            } else {
+                header("Location: principal.html");
+                exit();
             }
         }
         catch(Exception$e)
