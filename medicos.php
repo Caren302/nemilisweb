@@ -14,7 +14,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Administratores</title>
+	<title>Medicos</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -113,7 +113,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="text-condensedLight noLink" ><small>Medico</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/usuario.png" alt="Avatar" class="img-responsive">
@@ -147,15 +147,6 @@
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-accounts-list"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Administracion
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
 								<a href="administrador.php" class="full-width">
@@ -191,17 +182,11 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="medicos.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-accounts-add"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										Registrar médico
-									</div>
-									<a href="listamedicos.php" class="full-width">
+								<a href="listamedicos.php" class="full-width">
 										<div class="navLateral-body-cl">
 											<i class="zmdi zmdi-face"></i>
 										</div>
+										
 										<div class="navLateral-body-cr hide-on-tablet">
 											Perfil médico
 										</div>
@@ -212,21 +197,21 @@
 											<div class="navLateral-body-cr hide-on-tablet">
 												Nueva Receta
 											</div>
-									</a>
+										</a>
+										<a href="Nuevareceta.php" class="full-width">
+											<div class="navLateral-body-cl">
+												<i class="zmdi zmdi-view-web"></i>
+											</div>
+											<div class="navLateral-body-cr hide-on-tablet">
+												Historial medico
+											</div>
+										</a>
 									</a>
 									</ul>
 								</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-accounts"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Pacientes
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
+						
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
 								<a href="usuarios.html" class="full-width">
@@ -275,162 +260,15 @@
 									<div class="navLateral-body-cr hide-on-tablet">
 										Consultar inventario
 									</div>
-									<a href="entradas.html" class="full-width">
-										<div class="navLateral-body-cl">
-											<i class="zmdi zmdi-square-right"></i>
-										</div>
-										<div class="navLateral-body-cr hide-on-tablet">
-											Entradas inventario
-										</div>
-									</a>
-						<a href="salidas.html" class="full-width">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-long-arrow-left"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Salidas inventario
-							</div>
-						</a>
-						<a href="estadisticas.php" class="full-width">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-long-arrow-left"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Estadisticas
-							</div>
-						</a>
+									
+						
 						</ul>
 					</li>
 			</nav>
 		</div>
 	</section>
 	</section>
-	<section class="full-width pageContent">
-		<section class="full-width header-well">
-			<div class="full-width header-well-icon">
-			</div> </br>
-				<pre> 
-					&nbsp; <h3 class="text-center tittles" style="text-decoration: underline blue2px;">Registra nuevos medicos usuarios.</h3>	
-				</pre>
-		</section>
-		<div class="mdl-tabs__panel is-active" id="tabNewClient">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset-desktop">
-						<div class="full-width panel mdl-shadow--2dp">
-							<div class="full-width panel-tittle bg-primary text-center tittles">
-							Datos de nuevo Médico
-							</div>
-							<div class="full-width panel-content">
-								<form action="medi.php" method="post">
-									<h5 class="text-condensedLight">Ingresa los datos solicitados</h5>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="cedula" name="cedula" required>
-										<label class="mdl-textfield__label" for="NameClient">Cédula</label>
-										<span class="mdl-textfield__error">Cédula obligatorio</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="especialidad" name="especialidad" required>
-										<label class="mdl-textfield__label" for="Especialidad">Especialidad</label>
-										<span class="mdl-textfield__error">Especialidad</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" pattern="-?[A-Za-záéíóúÁÉÍÓÚ ]*(\.[0-9]+)?" id="nombre" name="nombre" required>
-										<label class="mdl-textfield__label" for="NameClient">Nombre Completo</label>
-										<span class="mdl-textfield__error">Nombre obligatorio</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="direccion" name="direccion" required>
-										<label class="mdl-textfield__label" for="addressClient1">Dirección</label>
-										<span class="mdl-textfield__error">Dirección obligatoria</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" pattern="-?[0-9+()- ]*(\.[0-9]+)?" id="telefono" name="telefono" required>
-										<label class="mdl-textfield__label" for="phoneClient">Número 
-											telefónico</label>
-										<span class="mdl-textfield__error">Número 
-											telefónico obligatorio</span> 
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="email" id="correo" name="correo" required>
-										<label class="mdl-textfield__label" for="emailClient">Correo</label>
-										<span class="mdl-textfield__error">Correo obligatorio</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="usuario" name="usuario" required>
-										<label class="mdl-textfield__label" for="usuario">Nombre de usuario</label>
-										<span class="mdl-textfield__error">Nombre de usuario obligatorio</span>
-									</div>
-									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="password" id="password" name="password" required>
-										<label class="mdl-textfield__label" for="password">Contraseña</label>
-										<span class="mdl-textfield__error">Contraseña obligatoria</span>
-									</div>
-										</br>
-									<p class="text-center">
-										<button class="mdl-button mdl-button--raised mdl-button--colored" style="WIDTH: 170px" id="btn-addClient"  onclick="Fagregartecins_inc_67()">Agregar Médico
-										</button>
-									</p>
-									<script>
-										function Fagregartecins_inc_67(){
-  
-  if(confirm("Esta seguro de registrar este administrador?")){
-  
-            tec_inc_id_tecnicos_67 = $('#txt_tec_ins_inc_67 ').val();
-            tec_inc_id_pregunta_67 = 67 //$('#txt_tec_inc_id_pre_2').val();
-            if(tec_inc_id_tecnicos_67 == '' || tec_inc_id_tecnicos_67    == null){
-                alert('Usuario registrado.');
-                return;
-            }
-
-            var datosTecInc1 = {
-                    tec_inc_id_tecnicos         : tec_inc_id_tecnicos_67,
-                    tec_inc_id_pregunta         : tec_inc_id_pregunta_67
-                };
-
-            $.post('php/agregartecinc.php', datosTecInc1, function(data, textStatus, xhr) {
-                    if (data == 0){
-                        alert('No se pudo procesar. Intente mas tarde.');
-                        return;
-                    }
-                    if (data == 2){
-                        alert('No se ha relizado la actuaizacion.');
-                        return;
-                    }
-                    if (data == 3){
-                        alert('No se pudo procesar. Error al insertar.');
-                        return;
-                    }
-                    if (data == 5){
-                        alert('Medicamento no encontrado.');
-                        return;
-                    }
-                    if (data == 1){
-                        $.post('php/administrador.php', datosTecInc1, function(data2, textStatus, xhr) {
-                            $('#datoscuadrilla').html(data2);
-                        });
-                        return;
-                    }
-                    alert('Error:' + data);
-
-            }); 
-        return;
-       }
-    }
-									</script>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 </body>
 </html>
 <script type="text/javascript">

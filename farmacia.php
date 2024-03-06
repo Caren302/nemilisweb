@@ -102,7 +102,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="text-condensedLight noLink" ><small>Farmacéutico</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/usuario.png" alt="Avatar" class="img-responsive">
@@ -130,74 +130,15 @@
 				</figcaption>
 			</figure>
 		<div class="full-width tittles navLateral-body-tittle-menu">
-		<i class="zmdi zmdi-accounts-list"></i></i><span class="hide-on-tablet">&nbsp;Administración</span>
+			<i class="zmdi zmdi-account-add"></i><span class="hide-on-tablet">&nbsp; Farmacéutico</span>
 			</div>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
-				
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
 						<a  class="full-width btn-subMenu">
 							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-accounts-list"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-							Administración
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
-						<ul class="full-width menu-principal sub-menu-options">
-							<li class="full-width">
-								<a href="listadmin.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-account-add"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										Registrar
-									</div>
-								</a>
-							</li>
-							<a href="listadmin.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-account-circle"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										Perfil administradores
-									</div>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="full-width divider-menu-h"></li>
-					<li class="full-width">
-						<a class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-account-circle"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Médicos
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
-						<ul class="full-width menu-principal sub-menu-options">
-							<li class="full-width">
-								<a href="medicos.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-accounts-add"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										Registrar médico
-									</div>
-									</a>
-									</a>
-									</ul>
-								</li>
-				
-					<li class="full-width divider-menu-h"></li>
-					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-library"></i>
+								<i class="zmdi zmdi-receipt"></i>
 							</div>
 							<div class="navLateral-body-cr hide-on-tablet">
 								Inventario
@@ -242,65 +183,191 @@
 		</div>
 	</section>
 	</section>
-	<section class="full-width pageContent">
-		<section class="full-width header-well">
-			<div class="full-width header-well-icon">
-			</div> </br>
-				<pre> 
-					&nbsp; <h3 class="text-center tittles">Bienvenido usuario administrador </h3>	
-				</pre>
-		</section>
-		
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<div class="full-width panel-content">
+		<form  action="buscaradmin.php" method="post">
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+		<i class="zmdi zmdi-search"></i>
+		<input type="text" name="buscar"  style="WIDTH: 780px; "size=32 name=text1> &nbsp;       
+		   <input class="mdl-button mdl-button--raised mdl-button--colored" style="WIDTH: 120px"; style="margin-left: 10px" type="submit" value="Buscar">
 		</div>
-	</section>
-</body>
-</html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#registrarNuevo').click(function(){
+		</form>
+		<br><br><br> 
+		<?php
+			// Función para obtener los medicamentos a punto de caducar
+			function obtenerMedicamentosACaducar()
+			{
+				// Conexión a la base de datos
+				$bd_host = "127.0.0.1";
+				$bd_user = "root";
+				$bd_pass = "";
+				$bd_name = "inventario";
+				$conexion = new mysqli($bd_host, $bd_user, $bd_pass, $bd_name);
+				if ($conexion->connect_errno) {
+					die("Fallo:(" . $conexion->mysqli_connect_errno() . ")" . $conexion->mysqli_connect_errno());
+				}
 
-			if($('#nombre').val()==""){
-				alertify.alert("Debes agregar el nombre");
-				return false;
-			}else if($('#apellido').val()==""){
-				alertify.alert("Debes agregar el apellido");
-				return false;
-			}else if($('#usuario').val()==""){
-				alertify.alert("Debes agregar el usuario");
-				return false;
-			}else if($('#password').val()==""){
-				alertify.alert("Debes agregar el password");
-				return false;
+				// Array para almacenar los nombres de los medicamentos a caducar
+				$medicamentosACaducar = array();
+
+				// Consulta SQL para obtener los medicamentos
+				$query = "SELECT nombre, fecha FROM medicamentos";
+
+				// Ejecutar la consulta
+				$result = $conexion->query($query);
+
+				// Verificar si hay resultados
+				if ($result->num_rows > 0) {
+					// Iterar sobre los resultados
+					while ($row = $result->fetch_assoc()) {
+						// Obtener la fecha de caducidad del medicamento y convertirla a timestamp
+						$fechaCaducidad = strtotime($row['fecha']);
+
+						// Calcular la fecha actual y la fecha dentro de dos semanas
+						$fechaActual = time();
+						$dosSemanasDespues = strtotime('+2 weeks', $fechaActual);
+
+						// Si la fecha actual es mayor a la fecha de caducidad menos dos semanas
+						if ($fechaActual > ($fechaCaducidad - (2 * 7 * 24 * 60 * 60))) {
+							// Agregar el nombre del medicamento al array de medicamentos a caducar
+							$medicamentosACaducar[] = $row;
+						}
+					}
+				}
+
+				// Cerrar la conexión a la base de datos
+				$conexion->close();
+
+				// Devolver el array de medicamentos a caducar
+				return $medicamentosACaducar;
 			}
 
-			cadena="nombre=" + $('#nombre').val() +
-					"&apellido=" + $('#apellido').val() +
-					"&usuario=" + $('#usuario').val() + 
-					"&password=" + $('#password').val();
+			// Ejecutar la función y obtener los medicamentos a caducar
+			$medicamentosACaducar = obtenerMedicamentosACaducar();
 
-					$.ajax({
-						type:"POST",
-						url:"php/registro.php",
-						data:cadena,
-						success:function(r){
+			?>
+				<style>
+					table {
+						width: 100%;
+						border-collapse: collapse;
+					}
+					th, td {
+						border: 1px solid #ddd;
+						padding: 8px;
+						text-align: left;
+					}
+					th {
+						background-color: #f2f2f2;
+					}
+				</style>
 
-							if(r==2){
-								alertify.alert("Este usuario ya existe, prueba con otro :)");
-							}
-							else if(r==1){
-								$('#frmRegistro')[0].reset();
-								alertify.success("Agregado con exito");
-							}else{
-								alertify.error("Fallo al agregar");
-							}
-						}
-					});
-		});
-	});
-</script>
+			<h3>Medicamentos a caducar dentro de las próximas dos semanas:</h3>
+
+			<?php if (empty($medicamentosACaducar)): ?>
+				<p>No hay medicamentos a caducar en las próximas dos semanas.</p>
+			<?php else: ?>
+				<table>
+					<tr>
+						<th>Nombre del Medicamento</th>
+						<th>Fecha de Caducidad</th>
+					</tr>
+					<?php foreach ($medicamentosACaducar as $medicamento): ?>
+						<tr>
+							<td><?php echo $medicamento['nombre']; ?></td>
+							<td><?php echo $medicamento['fecha']; ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</table>
+			<?php endif; ?>
+
+		<div>
+		<form method = "post">
+				<div class="mdl-cell mdl-cell--2-col-phone mdl-cell--4-col-tablet mdl-cell--1-col-desktop"  style="display : flex;flex-direction : row;">
+				<table class='mdl-data-table mdl-js-data-table mdl-shadow--20dp full-width table-responsive'  style="width: 100%;">
+						<thead><tr><th class='mdl-data-table__cell--non-numeric'>ID</th>
+							<th>Nombre</th>
+							<th>Presentacion</th>
+							<th>Categoria</th>
+							<th>Lote</th>
+							<th>Fecha</th>
+							<th>Cantidad</th>
+							<th>Seleccionar</th>
+						</tr></thead><tbody>
+
+
+			<?php
+
+				try 
+				{
+					
+					$conMySQL = new PDO("mysql:host=localhost;port=3306;dbname=inventario","root","");
+					$conMySQL->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$conMySQL->exec("SET CHARACTER SET UTF8");
+					
+					$sentenciaSQL= "SELECT * FROM  medicamentos";
+					foreach($conMySQL->query($sentenciaSQL) as $fila)
+					{
+						echo "
+						<tr>
+							<td>".$fila['id']."</td>
+							<td>".$fila['nombre']."</td>
+							<td>".$fila['categoria']."</td>
+							<td>".$fila['lote']."</td>
+							<td>".$fila['sector']."</td>
+							<td>".$fila['fecha']."</td>
+							<td>".$fila['cantidad']."</td>
+							</td><td><input type='checkbox' id='cbox1' name='eliminar[]' value='".$fila['id']."'></td>
+							";
+					
+					}
+					
+				}
+				catch (PDOException $e)
+				{
+
+					printf ("¡Error!: ".$e->getMessage()."<br/>");
+					die();
+
+				}
+				finally 
+				{
+					$conMySQL = null;
+				}
+
+			?>
+				</form>
+
+			<?php
+
+				$bd_host = "127.0.0.1";
+				$bd_user = "root";
+				$bd_pass = "";
+				$bd_name = "inventario";
+				$conexion = new mysqli($bd_host,$bd_user,$bd_pass,$bd_name);
+				if($conexion-> connect_errno){
+					die("Fallo:(".$conexion->mysqli_connect_errno().")".$conexion-> mysqli_connect_errno());
+				}
+
+			if(isset($_POST['eliminar'])){
+				if(empty($_POST['eliminar'])){
+					echo "Hola";
+			
+				}else{
+					foreach($_POST['eliminar'] as $id_borrar){
+						$borrarAlumnos = $conexion->query("DELETE FROM medicamentos WHERE  id='$id_borrar'");
+					}
+				}
+			}
+
+			?>
+	
+	</div>  
+		</form>
+	</div>
+</tbody>
+</table>
+<div> 
+<button class="mdl-button mdl-button--raised " style="color: red" style="margin: 10px"  type="submit" value="Eliminar">Eliminar</button>            
+</div>
+</section>
+</body>
+</html>

@@ -113,7 +113,7 @@
 						<i class="zmdi zmdi-power"></i>
 						<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 					</li>
-					<li class="text-condensedLight noLink" ><small>Administrador</small></li>
+					<li class="text-condensedLight noLink" ><small>Medico</small></li>
 					<li class="noLink">
 						<figure>
 							<img src="assets/img/usuario.png" alt="Avatar" class="img-responsive">
@@ -148,15 +148,7 @@
 				
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-accounts-list"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Administracion
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
+						
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
 								<a href="listadmin.php" class="full-width">
@@ -192,21 +184,15 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="medicos.php" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-accounts-add"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										Registrar médico
-									</div>
-									<a href="perlme.html" class="full-width">
+								
+									<a href="listamedicos.php" class="full-width">
 										<div class="navLateral-body-cl">
 											<i class="zmdi zmdi-face"></i>
 										</div>
 										<div class="navLateral-body-cr hide-on-tablet">
 											Perfil médico
 										</div>
-										<a href="nueRece.html" class="full-width">
+										<a href="Nuevareceta.php" class="full-width">
 											<div class="navLateral-body-cl">
 												<i class="zmdi zmdi-view-web"></i>
 											</div>
@@ -219,15 +205,7 @@
 								</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-accounts"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Pacientes
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
+						
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
 								<a href="usuarios.php" class="full-width">
@@ -258,15 +236,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a  class="full-width btn-subMenu">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-library"></i>
-							</div>
-							<div class="navLateral-body-cr hide-on-tablet">
-								Inventario
-							</div>
-							<span class="zmdi zmdi-chevron-left"></span>
-						</a>
+						
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
 								<a href="actualinventario.php" class="full-width">
