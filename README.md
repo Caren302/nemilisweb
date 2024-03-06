@@ -1,6 +1,8 @@
 <h1 align="center"> Enlace a la documentación </h1>
 
-https://docs.google.com/document/d/1WodteFQbOlONKqVcu8nhE4BS90IlWmz5/edit?usp=sharing&ouid=101484289213547685597&rtpof=true&sd=true 
+<p align="left">
+   <img src="[https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green](https://docs.google.com/document/d/1WodteFQbOlONKqVcu8nhE4BS90IlWmz5/edit?usp=sharing&ouid=101484289213547685597&rtpof=true&sd=true )">
+</p>
 
 #Link del video demostrativo de la aplicación móvil:
 
