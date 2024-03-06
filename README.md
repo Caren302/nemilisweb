@@ -1,16 +1,17 @@
 <h1 align="center"> Enlace a la documentación </h1>
 
-<p align="left">
-   <img src="[https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green](https://docs.google.com/document/d/1WodteFQbOlONKqVcu8nhE4BS90IlWmz5/edit?usp=sharing&ouid=101484289213547685597&rtpof=true&sd=true )">
-</p>
+https://docs.google.com/document/d/1WodteFQbOlONKqVcu8nhE4BS90IlWmz5/edit?usp=sharing&ouid=101484289213547685597&rtpof=true&sd=true 
 
-#Link del video demostrativo de la aplicación móvil:
+
+<h2 align="center">Link del video demostrativo de la aplicación móvil: </h2>
 
 https://drive.google.com/file/d/1HwCYLVWIplhUeKwx4Ulm0gvTw34xj_Wa/view?usp=sharing 
 https://drive.google.com/file/d/1rgWA1ymg0TPQpdshM_ema1qNMzAG1EMb/view?usp=sharing 
 
-#Link del video demostrativo de la aplicación web:
+<h2 align="center"> Link del video demostrativo de la aplicación web: </h2>
+
 https://drive.google.com/file/d/1hFfX3caajsb_qkXGFpQ12N807JIaHOtn/view?usp=sharing 
 
-#Link del reposiorio de la app movil:
+<h2 align="center"> Link del reposiorio de la app movil: </h2>
+
 https://github.com/Caren302/aplicacion_movil/tree/master 
